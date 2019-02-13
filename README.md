@@ -71,7 +71,21 @@ Write a function that calculates the number of points in the circle where (x,y) 
 
 Example: for radius = 2 the result should be 13.
 
-0 <= radius <= 1000
 
 ![alt text](http://i.imgur.com/1SMov3s.png)
 </details>
+
+
+# Circle Points Extended
+Write a function that calculates the number of points in the circle.
+<details><summary>Details</summary>
+You have the radius of a circle with the center in point (xP,yP).
+
+Write a function that calculates the number of points in the circle where (x,y) - the cartesian coordinates of the points - are integers.
+
+Example: for radius = 1000 the result should be 3141549.
+
+![alt text](http://i.imgur.com/1SMov3s.png)
+</details>
+
+
