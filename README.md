@@ -48,7 +48,8 @@ Valid board example:
 
 # Weight
 
-<details>My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a list with the weights of members is published and each month he is the last on the list which means he is the heaviest.
+<details><summary>Details</summary>
+    My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a list with the weights of members is published and each month he is the last on the list which means he is the heaviest.
 
 I am the one who establishes the list so I told him: "Don't worry any more, I will modify the order of the list". It was decided to attribute a "weight" to numbers. The weight of a number will be from now on the sum of its digits.
 
@@ -61,4 +62,16 @@ When two numbers have the same "weight", let us class them as if they were strin
 
 All numbers in the list are positive numbers and the list can be empty.</details>
 
+# Circle Points
+Write a function that calculates the number of points in the circle.
+<details><summary>Details</summary>
+You have the radius of a circle with the center in point (0,0).
 
+Write a function that calculates the number of points in the circle where (x,y) - the cartesian coordinates of the points - are integers.
+
+Example: for radius = 2 the result should be 13.
+
+0 <= radius <= 1000
+
+![alt text](http://i.imgur.com/1SMov3s.png)
+</details>
