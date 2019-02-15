@@ -1,19 +1,21 @@
-function Snake() {
-  this.x = 0;
-  this.y = 0;
-  this.xspeed=1;
-  this.yspeed=0;
-  this.total=0;
-  this.tail = [];
+class Snake {
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+    this.xspeed=1;
+    this.yspeed=0;
+    this.total=0;
+    this.tail = [];
+  }
 
-  this.dir = function (x,y) {
+  dir(x,y) {
     this.xspeed=x;
     this.yspeed=y;
   }
 
-  this.death = function () {
+  death() {
     for(let i=0;i<this.tail.length;i++){
-      let post = this.tail[i];
+      let pos = this.tail[i];
       let d = dist(this.x,this.y,pos.x,pos.y);
       if(d<1){
         this.total=0;
@@ -22,8 +24,7 @@ function Snake() {
     }
   }
 
-  this.update = function () {
-
+  update() {
     if(this.total === this.tail.length){
       for( let i=0;i<this.tail.length-1;i++){
           this.tail[i]= this.tail[i+1];
@@ -37,12 +38,9 @@ function Snake() {
     this.x = constrain(this.x, 0, width-scl);
     this.y = constrain(this.y, 0, height-scl);
 
-
   }
 
-
-
-  this.eat = function (pos) {
+  eat(pos){
     var d = dist(this.x, this.y, pos.x, pos.y);
     if(d<1) {
       this.total++;
@@ -52,15 +50,13 @@ function Snake() {
     }
   }
 
-  this.show = function () {
-    fill(255);
-    for(let i=0;i<this.tail.length;i++){
-      rect(this.tail[i].x,this.tail[i].y,scl,scl);
+  show(){
+      fill(255);
+      for(let i=0;i<this.tail.length;i++){
+        rect(this.tail[i].x,this.tail[i].y,scl,scl);
+      }
+      rect(this.x,this.y,scl,scl);
     }
-    rect(this.x,this.y,scl,scl);
-
-
-  }
 
 
 }
