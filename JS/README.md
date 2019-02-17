@@ -102,3 +102,7 @@ arr1 and arr2 may have different lengths, they always has at least one element;
 All inputs are valid.
 </details>
 
+# Snake
+
+# Dinosaur
+
