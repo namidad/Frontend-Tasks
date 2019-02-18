@@ -103,11 +103,11 @@ All inputs are valid.
 </details>
 
 # Snake
-</details><summary>Details</summary>
-<details>
+<details><summary>Details</summary>
+</details>
 
 # Dinosaur
 
-</details><summary>Details</summary>
-<details>
+<details><summary>Details</summary>
+</details>
 
