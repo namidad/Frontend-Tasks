@@ -1,6 +1,6 @@
 let dinosaur;
 let scl = 10;
-
+let over = false;
 
 function setup() {
   createCanvas(600, 600);
@@ -12,28 +12,44 @@ function setup() {
 
 
 function draw() {
-  background(51);
-  dinosaur.update();
-  obstacle.update();
-  this.check();
-  dinosaur.show();
-  obstacle.show();
-  fill(255,0,100);
+  if(!over){
+    background(51);
+    dinosaur.update();
+    obstacle.update();
+    this.check();
+    dinosaur.show();
+    obstacle.show();
+    fill(255,0,100);
+  } else {
+    background(51);
+    fill(255,0,100);
+  }
+
 }
 
 
 function check(){
   for(let i=0;i<dinosaur.dinosaur.length;i++){
     for(let j=0;j<obstacle.obstacle.length;j++){
-      if(dinosaur.dinosaur[i].x===obstacle.obstacle[j].x && dinosaur.dinosaur[i].y===obstacle.obstacle[j].y){
-
-        console.log("koniec gry");
-        console.log(obstacle.obstacle);
+      if(!Array.isArray(obstacle.obstacle[j])){
+        if(dinosaur.dinosaur[i].x===obstacle.obstacle[j].x && dinosaur.dinosaur[i].y===obstacle.obstacle[j].y){
+          console.log("koniec gry");
+          over=true;
+          break;
+        }
+      } else {
+          for(let k=0;k<obstacle.obstacle[j].length;k++){
+            if(dinosaur.dinosaur[i].x===obstacle.obstacle[j][k].x && dinosaur.dinosaur[i].y===obstacle.obstacle[j][k].y){
+              console.log("koniec gry");
+              over=true;
+              break;
+            }
+        }
+      }
       }
     }
 
   }
-}
 
 
 

@@ -27,40 +27,31 @@ class Dinosaur {
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y-10;
         }
-        this.sleep(100);
         this.yspeed=-2;
       } else if (this.yspeed===-2){
-        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y-10;
         }
         this.yspeed=-3;
       } else if (this.yspeed===-3){
-        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y-10;
         }
         this.yspeed=-4;
       } else if (this.yspeed===-4){
-        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y+10;
         }
-        this.sleep(100);
         this.yspeed=-5;
       } else if (this.yspeed===-5){
-        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y+10;
         }
-        this.sleep(100);
         this.yspeed=-6;
       } else if (this.yspeed===-6){
-        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y+10;
         }
-        this.sleep(100);
         this.yspeed=0;
       }
 
