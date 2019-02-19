@@ -1,10 +1,16 @@
 let dinosaur;
 let scl = 10;
 let over = false;
+let points = 0;
 
 function setup() {
   createCanvas(600, 600);
   frameRate(10);
+
+  textSize(40);
+  textAlign(LEFT);
+
+
   dinosaur=new Dinosaur();
   obstacle=new Obstacle();
 }
@@ -19,12 +25,28 @@ function draw() {
     this.check();
     dinosaur.show();
     obstacle.show();
+    textAlign(LEFT);
+    drawWords(20);
     fill(255,0,100);
   } else {
     background(51);
+    textAlign(LEFT);
+    drawWords2(20);
     fill(255,0,100);
   }
 
+}
+
+function drawWords(x) {
+  fill(255);
+  let textT = "Zdobyte punkty: "+points;
+  text(textT, x, 80);
+}
+
+function drawWords2(x) {
+  fill(255);
+  let textT = "Koniec gry! Zdobyte punkty: "+points;
+  text(textT, x, 80);
 }
 
 
@@ -33,7 +55,6 @@ function check(){
     for(let j=0;j<obstacle.obstacle.length;j++){
       if(!Array.isArray(obstacle.obstacle[j])){
         if(dinosaur.dinosaur[i].x===obstacle.obstacle[j].x && dinosaur.dinosaur[i].y===obstacle.obstacle[j].y){
-          console.log("koniec gry");
           over=true;
           break;
         }
