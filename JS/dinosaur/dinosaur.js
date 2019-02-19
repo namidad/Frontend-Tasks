@@ -1,15 +1,15 @@
 class Dinosaur {
     constructor() {
-      this.x = 0;
-      this.y = 0;
       this.xspeed=1;
       this.yspeed=0;
       this.dinosaur = [createVector(0,590), createVector(20,590), createVector(10,580)];
     }
 
     dir(x,y){
-      this.xspeed=x;
-      this.yspeed=y;
+      if(this.yspeed===0){
+        this.xspeed=x;
+        this.yspeed=y;
+      }
     }
 
     update(){
@@ -27,19 +27,40 @@ class Dinosaur {
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y-10;
         }
-        this.show();
+        this.sleep(100);
+        this.yspeed=-2;
+      } else if (this.yspeed===-2){
+        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y-10;
         }
-        this.show();
+        this.yspeed=-3;
+      } else if (this.yspeed===-3){
+        this.sleep(100);
+        for(let i=0;i<this.dinosaur.length;i++){
+          this.dinosaur[i].y=this.dinosaur[i].y-10;
+        }
+        this.yspeed=-4;
+      } else if (this.yspeed===-4){
+        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y+10;
         }
-        this.show();
+        this.sleep(100);
+        this.yspeed=-5;
+      } else if (this.yspeed===-5){
+        this.sleep(100);
         for(let i=0;i<this.dinosaur.length;i++){
           this.dinosaur[i].y=this.dinosaur[i].y+10;
         }
-        this.show();
+        this.sleep(100);
+        this.yspeed=-6;
+      } else if (this.yspeed===-6){
+        this.sleep(100);
+        for(let i=0;i<this.dinosaur.length;i++){
+          this.dinosaur[i].y=this.dinosaur[i].y+10;
+        }
+        this.sleep(100);
         this.yspeed=0;
       }
 
@@ -50,7 +71,17 @@ class Dinosaur {
         for(let i=0;i<this.dinosaur.length;i++){
           rect(this.dinosaur[i].x,this.dinosaur[i].y,scl,scl);
         }
-
       }
+
+
+
+   sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 
   }
