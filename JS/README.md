@@ -109,5 +109,6 @@ All inputs are valid.
 # Dinosaur
 
 <details><summary>Details</summary>
+    Simple game based on Google's dinosaur. You can use only 3 buttons - left arrow, up arrow and right arrow. Once cliced you jump or move 1 block to left or right. Your mission is to avoid contact with obstacle. You get points, when simple obstacle is deleted from array.
 </details>
 
