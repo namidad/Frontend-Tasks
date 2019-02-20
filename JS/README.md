@@ -2,13 +2,15 @@
 
 # Rot13
 ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.
-
+<details><summary>Details</summary>
 Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+
 
 Test.it("test", function(){
     Test.expect("grfg" == rot13("test"), "Input: test , Expected Output: grfg , Actual Output: " + rot13("test"))
   })  
   
+  </details>
   
 # Sudoku
 Write a function doneOrNot passing a board as parameter. If the board is valid return 'Finished!', otherwise return 'Try again!'
@@ -109,6 +111,6 @@ All inputs are valid.
 # Dinosaur
 
 <details><summary>Details</summary>
-    Simple game based on Google's dinosaur. You can use only 3 buttons - left arrow, up arrow and right arrow. Once cliced you jump or move 1 block to left or right. Your mission is to avoid contact with obstacle. You get points, when simple obstacle is deleted from array.
+    Simple game based on Google's dinosaur. You can use only 3 buttons - left arrow, up arrow and right arrow. Once cliced you jump or move 1 block to left or right. Your mission is to avoid contact with obstacle. You get points, when single obstacle is deleted from array.
 </details>
 
